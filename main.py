@@ -134,14 +134,6 @@ def countLines(path, depth):
 
 if __name__ == "__main__":
 
-    rootPath = "./Source"
-
-    pathExist = os.path.exists(rootPath)
-
-    if not pathExist:
-        print("No such path")
-        exit(5)
-
     # load configs
     global configs
     configs = configparser.ConfigParser()
@@ -150,5 +142,14 @@ if __name__ == "__main__":
     # load outputs
     global outputFile0
     outputFile0 = open("./Out/output.txt", "w")
+
+    rootPath = configs["path"]["analyzePath"]
+    rootPath = eval(rootPath) # 去除引号
+
+    pathExist = os.path.exists(rootPath)
+
+    if not pathExist:
+        print("No such path")
+        exit(5)
     
     countLines(rootPath, 0)

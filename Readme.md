@@ -12,10 +12,9 @@ ignoreDir 要忽略的文件夹
 
 ## how to use?
 
-1. 将要扫描的工程放到 `./Source` 的文件夹之下
-2. 填好配置文件 （默认不需要）
-3. CD 到该工具的目录
-4. 执行脚本 `python main.py`
+1. 填好配置文件 `config.ini`, 其中 `analyzePath` 是要统计的目录
+2. CD 到该工具的目录
+3. 执行脚本 `python main.py`
 
 ## Addition
 
